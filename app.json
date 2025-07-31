@@ -1,0 +1,105 @@
+{
+  "expo": {
+    "name": "Arrivo",
+    "slug": "arrivo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "arrivo",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "icon": {
+        "dark": "./assets/icons/ios-dark1.png",
+        "light": "./assets/icons/ios-light1.png",
+        "tinted": "./assets/icons/ios-tinted1.png"
+      }
+    },
+    "splash": {
+      "image": "./assets/icons/splash-icon-light1.png",
+      "imageWidth": 200,
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-icon1.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.joelsam_1.arrivo",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB17GrmMGL9Wc-uYI0BbqXguvLpZxLaAbY"
+        }
+      },
+"intentFilters": [
+  {
+    "action": "android.intent.action.SEND",
+    "category": ["android.intent.category.DEFAULT"],
+    "data": {
+      "mimeType": "text/plain"
+    }
+  },
+  {
+    "action": "android.intent.action.SENDTO",
+    "category": ["android.intent.category.DEFAULT"],
+    "data": {
+      "scheme": "mailto"
+    }
+  }
+],
+
+      "queries": [
+        {
+          "intent": [
+            {
+              "action": "android.intent.action.SENDTO",
+              "data": {
+                "scheme": "mailto"
+              }
+            }
+          ]
+        },
+        {
+          "intent": [
+            {
+              "action": "android.intent.action.SEND",
+              "data": {
+                "mimeType": "text/plain"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icons/splash-icon-light1.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#000000"
+        }
+      ],
+      "expo-secure-store",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "699c4418-a057-441c-82ff-503a375cb9b6"
+      }
+    },
+    "owner": "joelsam_1"
+  }
+}
